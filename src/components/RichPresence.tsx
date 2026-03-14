@@ -33,7 +33,7 @@ export default function RichPresence(props: { activity: Activity | undefined }) 
     <div class="bg-[#F3EDF7] dark:bg-[#211F26] border border-[#79747E]/30 dark:border-[#49454F]/30 rounded-4xl py-5 px-6 flex items-center gap-6 w-full max-w-md shadow-lg font-gg select-none transition-colors duration-300">
       <img
         class="rounded-2xl w-18 h-18 md:w-20 md:h-20 lg:w-24 lg:h-24 aspect-square shadow-md"
-        src="https://cdn.discordapp.com/app-assets/1481083110971019396/1481088949593047070.png"
+        src={props.activity?.assets.large_image === "fluffy" ? "https://cdn.discordapp.com/app-assets/1481083110971019396/1481088949593047070.png" : "https://cdn.discordapp.com/app-assets/1481083110971019396/1481083293792211095.png"}
       />
 
       <div class="flex flex-col min-w-0 justify-center text-left">
