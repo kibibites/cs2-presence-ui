@@ -474,15 +474,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@solid-primitives/websocket@npm:^1.3.2":
-  version: 1.3.2
-  resolution: "@solid-primitives/websocket@npm:1.3.2"
-  peerDependencies:
-    solid-js: ^1.6.12
-  checksum: 10c0/70c816610ce1f37902b0b4f8eb5f66e66efbf57bd3dee80c07999b89dd5214ed3346e147383e03f2a009dc93184a895a7a41d11159f19bc063cff89b3db9d0ab
-  languageName: node
-  linkType: hard
-
 "@std/cbor@jsr:^0.1.9":
   version: 0.1.9
   resolution: "@std/cbor@jsr:0.1.9::__archiveUrl=https%3A%2F%2Fnpm.jsr.io%2F~%2F11%2F%40jsr%2Fstd__cbor%2F0.1.9.tgz"
@@ -854,7 +845,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cs2-presence-ui@workspace:."
   dependencies:
-    "@solid-primitives/websocket": "npm:^1.3.2"
     "@std/cbor": "jsr:^0.1.9"
     "@tailwindcss/vite": "npm:^4.2.1"
     "@types/node": "npm:^24.12.0"

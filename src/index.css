@@ -9,10 +9,25 @@
 
 @font-face {
   font-family: "gg sans";
-  font-weight: 600;
-  src: url("/fonts/ggsanssemibold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/ggsansmedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "gg sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/ggsansbold.woff2") format("woff2");
 }
 
 @theme {
   --font-gg: "gg sans", sans-serif;
+  --font-sans: "Roboto", "Noto Sans", sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
