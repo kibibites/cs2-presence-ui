@@ -19,15 +19,23 @@ export default function App() {
     blinkTimer = setTimeout(() => setBlink(false), 500);
 
     const data = new Uint8Array(buf);
+    if (data.length < 3) return;
+
+    const marker = data.slice(0, 3);
+    const payload = data.slice(3);
+
     const pong = [0xe2, 0x99, 0xa5];
+    const sync = [0xe2, 0x87, 0x8b];
 
-    if (data.length === 3 && data.every((v, i) => v === pong[i])) return;
+    if (marker.every((v, i) => v === pong[i])) return;
 
-    try {
-      const decoded = decodeCbor(data) as unknown as Activity;
-      setActivity(decoded);
-    } catch (e) {
-      console.error("failed to decode cbor", e);
+    if (marker.every((v, i) => v === sync[i])) {
+      try {
+        const decoded = decodeCbor(payload) as unknown as Activity;
+        setActivity(decoded);
+      } catch (e) {
+        console.error("failed to decode cbor", e);
+      }
     }
   }
 
